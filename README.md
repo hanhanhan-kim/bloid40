@@ -2,7 +2,7 @@
 
 *A Bluetooth-capable, QMK-powered, handwired, 40% ortholinear keyboard*
 
-**Disclaimer:** QMK isn't the best software for writing Bluetooth-supported keyboard firmware. I strongly recommend instead [ZMK](https://zmk.dev/). ZMK is built from the ground up with Bluetooth in mind. As of 2023/10/16, QMK is [patching its Bluetooth support, which is currently broken](https://github.com/qmk/qmk_firmware/issues/20233). 
+__**Disclaimer:**__ QMK isn't the best software for writing Bluetooth-supported keyboard firmware. I strongly recommend instead [ZMK](https://zmk.dev/). ZMK is built from the ground up with Bluetooth in mind. As of 2023/10/16, QMK is [patching its Bluetooth support, which is currently broken](https://github.com/qmk/qmk_firmware/issues/20233). 
 
 ![profile](docs/bloid40.jpg)
 
@@ -34,7 +34,7 @@ For general guidance on handwiring keyboards, see [this link](https://www.ghost7
 
 ## Known Issues
 
-- The spinning of a rotary encoder works well when the keyboard is plugged in, but relays extremely delayed signals when the keyboard is in Bluetooth mode. Curiously, pressing the rotary encoder while in Bluetooth mode results in the sending of the correct signal, with minimal delay. Pressing any of the regular keys while in Bluetooth mode does not result in any perceptible delay. Given this finickiness regarding Bluetooth + rotary encoder support in QMK, I uninstalled the rotary encoder from my build. 
+- The spinning of a rotary encoder works well when the keyboard is plugged in, but relays extremely delayed signals when the keyboard is in Bluetooth mode. Curiously, pressing the rotary encoder while in Bluetooth mode results in the sending of the correct signal, with minimal delay. Pressing any of the regular keys while in Bluetooth mode does not result in any perceptible delay. Given this finickiness regarding Bluetooth + rotary encoder support in QMK, __**I uninstalled the rotary encoder from my build**__. 
 - QMK does [not support NKRO (n-key rollover) on Bluetooth builds](https://github.com/qmk/qmk_firmware/blob/master/docs/feature_bluetooth.md#bluetooth-rulesmk-options). 
 - When switching from Bluetooth to wired use, I would suggest completely disconnecting the Bluetooth from the computer. Simultaneous USB and Bluetooth connections will result in strangeness. For example, on Windows, [keys will be registered twice](https://geekhack.org/index.php?topic=108859.0)—once via the USB connection, and again via the Bluetooth connection. On Linux (Ubuntu 18.04), simultaneous Bluetooth and USB connections result in perceptibly delayed keyboard presses. 
 
